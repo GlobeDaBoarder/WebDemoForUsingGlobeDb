@@ -14,24 +14,6 @@ import java.io.IOException;
 
 @WebServlet("/register")
 public class RegisterServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
-
-        System.out.println("servlet:");
-        System.out.println(username);
-        System.out.println(password);
-
-        User user = new User(username, password);
-
-        new AutoCommitDatabaseFactory("D:\\CopyProject\\CopyProject\\WebDemo")
-                .createDatabase("db1")
-                .createCollection("Users")
-                .addEntry(user);
-
-
-    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -48,5 +30,7 @@ public class RegisterServlet extends HttpServlet {
                 .createDatabase("db1")
                 .createCollection("Users")
                 .addEntry(user);
+
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
     }
 }
