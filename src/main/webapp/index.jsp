@@ -13,40 +13,32 @@
 
     <!--internal js files-->
     <script src="js/formValidator.js" defer></script>
-    <script src="js/main.js" defer></script>
 
 </head>
 
 <body>
 <header class="card-header">
-    <h1>Gleb Ivahyn</h1>
+    <h1>User Form</h1>
 </header>
 <main class="card-body">
     <div class="card-body">
-        <h3>City project Form:</h3>
-        <form class="col-md-3 needs-validation" id="form" onsubmit="return false" novalidate>
+        <h3>User Form:</h3>
+<%--        onsubmit="return false"--%>
+        <form class="col-md-3 needs-validation" id="form" name="form" action="result.jsp" novalidate>
             <div class="form-group">
-                <label for="projectName">Project name:</label>
-                <input type="text" class="form-control" id="projectName" placeholder="Enter project name"
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter username"
                        minlength="5" maxlength="15" autocomplete="off" required>
                 <div class="invalid-feedback">
-                    Please enter a project name with at least 5 and maximum 15 characters!
+                    Please enter a username with at least 5 and maximum 15 characters!
                 </div>
             </div>
             <div class="form-group">
-                <label for="city">City:</label>
-                <input type="text" class="form-control" id="city" placeholder="Enter city"
-                       minlength="5" maxlength="15" autocomplete="off" required>
+                <label for="password">Password:</label>
+                <input type="text" class="form-control" id="password" name="password" placeholder="Enter password"
+                       minlength="8" maxlength="15" autocomplete="off" required>
                 <div class="invalid-feedback">
-                    Please enter a city name from 5 to 15 characters long!
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="description">Description:</label>
-                <textarea  class="form-control" id="description" rows="4" placeholder="Enter description"
-                           minlength="5" maxlength="500" autocomplete="off" required></textarea>
-                <div class="invalid-feedback">
-                    Description should contain from 5 to 500 characters!
+                    Please enter a password from 8 to 15 characters long!
                 </div>
             </div>
             <button type="submit" class="btn btn-primary" id="submit">Submit</button>
