@@ -36,6 +36,11 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.globe.db</groupId>
+            <artifactId>GlobeDB</artifactId>
+            <version>1.2</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -24,7 +24,7 @@
     <div class="card-body">
         <h3>User Form:</h3>
 <%--        onsubmit="return false"--%>
-        <form class="col-md-3 needs-validation" id="form" name="form" action="result.jsp" novalidate>
+        <form class="col-md-3 needs-validation" id="form" name="form" action="register" method="post" novalidate>
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" class="form-control" id="username" name="username" placeholder="Enter username"
