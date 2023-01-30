@@ -1,7 +1,5 @@
 package com.servlet;
 
-import base.database.AutoCommitDatabaseFactory;
-import base.database.CollectionOfDatabase;
 import com.database.Database;
 import com.entities.User;
 import jakarta.servlet.ServletException;
