@@ -7,10 +7,9 @@
             event.stopImmediatePropagation()
         }
         else {
-            const projectNameValue = document.getElementById("projectName").value;
-            const cityValue = document.getElementById("city").value;
-            const descriptionValue = document.getElementById("description").value;
-            const json = JSON.stringify({projectName: projectNameValue, city: cityValue, projectDescription: descriptionValue})
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const json = JSON.stringify({username: username, password: password})
             self.postMessage(json);
         }
 

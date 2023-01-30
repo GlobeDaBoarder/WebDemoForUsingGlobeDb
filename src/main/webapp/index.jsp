@@ -44,6 +44,24 @@
             <button type="submit" class="btn btn-primary" id="submit">Submit</button>
         </form>
     </div>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover table-bordered " id="table">
+            <thead>
+            <tr>
+                <th scope="col" class="col-md-1">#</th>
+                <th scope="col" class="col-md-1">Username</th>
+                <th scope="col" class="col-md-1">Password</th>
+                <th scope="col" class="col-md-2">edit</th>
+                <th scope="col" class="col-md-2">delete</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+            <tr>
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </main>
 </body>
 </html>

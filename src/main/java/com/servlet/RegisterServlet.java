@@ -2,7 +2,7 @@ package com.servlet;
 
 import base.database.AutoCommitDatabaseFactory;
 import base.database.CollectionOfDatabase;
-import base.database.Database;
+import com.database.Database;
 import com.entities.User;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -26,10 +26,7 @@ public class RegisterServlet extends HttpServlet {
 
         User user = new User(username, password);
 
-        new AutoCommitDatabaseFactory("D:\\CopyProject\\CopyProject\\WebDemo")
-                .createDatabase("db1")
-                .createCollection("Users")
-                .addEntry(user);
+        Database.getUserCollectionInstance().addEntry(user);
 
         req.getRequestDispatcher("index.jsp").forward(req, resp);
     }
